@@ -3,8 +3,9 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-# inline credit @kkara9009
-# t.me/kkara9009
+# inline credit @keselekpermen69
+# Recode by @mrismanaziz
+# t.me/SharingUserbot
 #
 """ Userbot initialization. """
 
@@ -77,8 +78,8 @@ LOGS = getLogger(__name__)
 
 if version_info[0] < 3 or version_info[1] < 8:
     LOGS.info(
-        "You MUST have python at least version 3.8."
-         "Some features depend on this python version. Bot stops."
+        "Anda HARUS memiliki python setidaknya versi 3.8."
+        "Beberapa fitur tergantung versi python ini. Bot berhenti."
     )
     sys.exit(1)
 
@@ -86,20 +87,25 @@ if CONFIG_CHECK := os.environ.get(
     "___________PLOX_______REMOVE_____THIS_____LINE__________", None
 ):
     LOGS.info(
-        "Please remove the line mentioned in the first hashtag from the config.env . file"
+        "Harap hapus baris yang disebutkan dalam tagar pertama dari file config.env"
     )
     sys.exit(1)
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/AyiinOXD/Reforestation/master/DEVS.json"
+        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
         DEVS = [
-            5233742848,
-            1174498420,    
+            997461844,
+            1905050903,
+            844432220,
+            883761960,
+            2130526178,
+            997461844,
+            1663258664,
         ]
         break
     DEVS = _DEVS.json()
@@ -142,7 +148,7 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "AyiinOXDSupport")
+GROUP = os.environ.get("GROUP", "AyiinXdSupport")
 CHANNEL = os.environ.get("CHANNEL", "AyiinSupport")
 
 # Heroku Credentials for updater.
@@ -157,7 +163,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinOXD/Ayiin-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinXd/Ayiin-Userbot.git")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -187,10 +193,10 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # untuk perintah teks costum .alive
 ALIVE_TEKS_CUSTOM = os.environ.get(
     "ALIVE_TEKS_CUSTOM",
-    "𝙷𝙴𝚈, USER OF 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃")
+    "𝙷𝙴𝚈, 𝚂𝙰𝚈𝙰 𝙿𝙴𝙽𝙶𝙶𝚄𝙽𝙰 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "AyiinOXD")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "AyiinXd")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✧")
@@ -219,10 +225,10 @@ BOT_VER = os.environ.get("BOT_VER", "3.6.9")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/c19495843c23161b5e864.png")
+              or "https://telegra.ph/file/940f21be8d8863b6c70ae.jpg")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/c19495843c23161b5e864.png")
+              or "https://telegra.ph/file/9f8e73d387f25b7f27ce5.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
@@ -269,7 +275,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
 # Jangan di hapus Nanti ERROR
 while 0 < 6:
     _BLACKLIST = get(
-        "https://raw.githubusercontent.com/AyiinOXD/Reforestation/master/ayiinblacklist.json"
+        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/ayiinblacklist.json"
     )
     if _BLACKLIST.status_code != 200:
         if 0 != 5:
@@ -286,7 +292,7 @@ gc = str(b64decode("QEF5aWluWGRTdXBwb3J0"))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
-        "https://raw.githubusercontent.com/AyiinOXD/Reforestation/master/whitelist.json"
+        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/whitelist.json"
     )
     if _WHITELIST.status_code != 200:
         if 0 != 5:
@@ -342,7 +348,7 @@ async def update_restart_msg(chat_id, msg_id):
 
 
 try:
-    from AyiinOXD.modules.sql_helper.globals import delgvar, gvarstatus
+    from AyiinXd.modules.sql_helper.globals import delgvar, gvarstatus
 
     chat_id, msg_id = gvarstatus("restartstatus").split("\n")
     with bot:
@@ -415,10 +421,10 @@ with bot:
         import os
         import random
 
-        from AyiinOXD.modules.sql_helper.bot_blacklists import check_is_black_list
-        from AyiinOXD.modules.sql_helper.bot_pms_sql import add_user_to_db, get_user_id
-        from AyiinOXD.modules.sql_helper.globals import addgvar, delgvar, gvarstatus
-        from AyiinOXD.ayiin import AyiinDB, HOSTED_ON, reply_id
+        from AyiinXd.modules.sql_helper.bot_blacklists import check_is_black_list
+        from AyiinXd.modules.sql_helper.bot_pms_sql import add_user_to_db, get_user_id
+        from AyiinXd.modules.sql_helper.globals import addgvar, delgvar, gvarstatus
+        from AyiinXd.ayiin import AyiinDB, HOSTED_ON, reply_id
         from Stringyins import get_languages, get_string, language
 
         adB = AyiinDB()
@@ -431,9 +437,9 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/c19495843c23161b5e864.png",
-                    "https://telegra.ph/file/c19495843c23161b5e864.png",
-                    "https://telegra.ph/file/c19495843c23161b5e864.png",
+                    "https://telegra.ph/file/9f8e73d387f25b7f27ce5.jpg",
+                    "https://telegra.ph/file/c935d34b48e45fba22b03.jpg",
+                    "https://telegra.ph/file/392f69c8717c91b1e8a3b.jpg",
                     "https://telegra.ph/file/4c5b756dd13d7a88c866b.jpg",
                 ]
         )
@@ -475,7 +481,7 @@ with bot:
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            f"**ERROR:** When saving message details in database\n`{str(e)}`",
+                            f"**ERROR:** Saat menyimpan detail pesan di database\n`{str(e)}`",
                         )
             else:
                 if event.text.startswith("/"):
@@ -509,7 +515,7 @@ with bot:
                             )
                     except UserIsBlockedError:
                         return await event.reply(
-                            "❌ **This user is blocked by bot.**"
+                            "❌ **Bot ini diblokir oleh pengguna.**"
                         )
                     except Exception as e:
                         return await event.reply(f"**ERROR:** `{e}`")
@@ -526,7 +532,7 @@ with bot:
                         if BOTLOG:
                             await event.client.send_message(
                                 BOTLOG_CHATID,
-                                f"**ERROR:** When saving message details in database\n`{e}`",
+                                f"**ERROR:** Saat menyimpan detail pesan di database\n`{e}`",
                             )
 
         @tgbot.on(
@@ -545,7 +551,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"You are not allowed, this is Userbot Owned {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.InlineQuery)
@@ -554,7 +560,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@AyiinOXDSupport"):
+                    "@AyiinXdSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=logoyins,
@@ -564,23 +570,23 @@ with bot:
                 )
             elif query.startswith("repo"):
                 result = builder.article(
-                    title="Owner",
-                    description="Ayiin - Userbot",
-                    url="https://t.me/kkara9009",
+                    title="Repository",
+                    description="Repository Ayiin - Userbot",
+                    url="https://t.me/AyiinXdSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [KaranRaj](https://t.me/kkara9009)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinOXDSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Karan](https://t.me/kkara9009)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Ananya",
-                                "https://t.me/an_unic_or_n47"),
+                                "ɢʀᴏᴜᴘ",
+                                "https://t.me/AyiinXdSupport"),
                             custom.Button.url(
-                                "Karan",
-                                "https://t.me/kkara9009"),
+                                "ʀᴇᴘᴏ",
+                                "https://github.com/AyiinXd/Ayiin-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -589,7 +595,7 @@ with bot:
                 result = builder.article(
                     title="String",
                     description="String Ayiin - Userbot",
-                    url="https://t.me/AyiinOXDSupport",
+                    url="https://t.me/AyiinXdSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -600,13 +606,13 @@ with bot:
                         [
                             custom.Button.url(
                                 "Bᴏᴛ Sᴛʀɪɴɢ",
-                                url="https://t.me/AyiinOXDStringRobot?start="),
+                                url="https://t.me/AyiinStringRobot?start="),
                             custom.Button.url(
                                 "Sᴛʀɪɴɢ Rᴇᴘʟɪᴛ",
-                                url="https://replit.com/@anunicn47/AyiinOXDString"),
+                                url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
                         ],
                         [
-                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinOXDSupport"),
+                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinXdSupport"),
                         ],
                     ],
                     link_preview=False,
@@ -628,7 +634,7 @@ with bot:
                 result = builder.article(
                     title="Lang",
                     description="Lang Ayiin - Userbot",
-                    url="https://t.me/AyiinOXDSupport",
+                    url="https://t.me/AyiinXdSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -674,7 +680,7 @@ with bot:
                 result = builder.article(
                     title="✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ✨",
                     description="Ayiin - Userbot | Telethon",
-                    url="https://t.me/AyiinOXDSupport",
+                    url="https://t.me/AyiinSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
@@ -685,10 +691,10 @@ with bot:
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinOXDSupport"),
+                                "https://t.me/AyiinXdSupport"),
                             custom.Button.url(
-                                "Owner",
-                                "https://t.me/AyiinOXD"),
+                                "ʀᴇᴘᴏ",
+                                "https://github.com/AyiinXd/Ayiin-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -711,7 +717,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"You are not allowed, this is Userbot Owned {owner}"
+                    f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -721,8 +727,8 @@ with bot:
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @kkara9009
-                # https://t.me/kkara9009
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Kyy-Userbot
+                # https://t.me/TelethonChat/115200
                 await event.edit(
                     file=logoyins,
                     link_preview=True,
@@ -734,8 +740,8 @@ with bot:
             )
         )
         async def gback_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @kkara9009
-                # https://t.me/kkara9009
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Ayiin-Userbot
+                # https://t.me/TelethonChat/115200
                 text = (
                     f"**✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
                 await event.edit(
@@ -770,14 +776,14 @@ with bot:
                         pass
 
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
-                await event.answer(reply_popMenu• - Voice chat group for_up_alert, cache_time=0, alert=True)
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.CallbackQuery(data=b"inline_yins"))
         async def about(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 await event.edit(f"""
-•Menu• - Voice chat group for [{user.first_name}](tg://user?id={user.id})
+•Menu• - Voice chat group untuk [{user.first_name}](tg://user?id={user.id})
 """,
                                  buttons=[
                                      [
@@ -790,7 +796,7 @@ with bot:
                                  ]
                                  )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -802,31 +808,31 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Commands available in vcplugin**
+✘ **Perintah yang tersedia di vcplugin** ✘
 
-  » **Command : **`{cmd}play` <Song Title/YT Link>
-  » **Usage :** __To Play Songs in voice chat groups with your account.__
+  »  **Perintah : **`{cmd}play` <Judul Lagu/Link YT>
+  »  **Kegunaan :** __Untuk Memutar Lagu di voice chat group dengan akun kamu.__
 
-  » **Command : **`{cmd}vplay` <Video Title/YT Link>
-  » **Usage :** __To Play Video in voice chat group with your account.__
+  »  **Perintah : **`{cmd}vplay` <Judul Video/Link YT>
+  »  **Kegunaan :** __Untuk Memutar Video di voice chat group dengan akun kamu.__
 
-  » **Command : **`{cmd}end`
-  » **Usage:** __To stop the video/song currently playing in the voice chat group.__
+  »  **Perintah : **`{cmd}end`
+  »  **Kegunaan :** __Untuk Memberhentikan video/lagu yang sedang putar di voice chat group.__
 
-  » **Command : **`{cmd}skip`
-  » **Usage :** __To Skip the video/song that is currently playing.__
+  »  **Perintah : **`{cmd}skip`
+  »  **Kegunaan :** __Untuk Melewati video/lagu yang sedang di putar.__
 
-  » **Command : **`{cmd}pause`
-  » **Usage :** __To stop the currently playing video/song.__
+  »  **Perintah : **`{cmd}pause`
+  »  **Kegunaan :** __Untuk memberhentikan video/lagu yang sedang diputar.__
 
-  » **Command : **`{cmd}resume`
-  » **Usage :** __To continue playing the currently playing video/song.__
+  »  **Perintah : **`{cmd}resume`
+  »  **Kegunaan :** __Untuk melanjutkan pemutaran video/lagu yang sedang diputar.__
 
-  » **Command : **`{cmd}volume` 1-200
-  » **Usage :** __To change volume (Requires admin rights).__
+  »  **Perintah : **`{cmd}volume` 1-200
+  »  **Kegunaan :** __Untuk mengubah volume (Membutuhkan Hak admin).__
 
-  » **Command : **`{cmd}playlist`
-  » **Usage :** __To display playlist of Songs/Videos.__
+  »  **Perintah : **`{cmd}playlist`
+  »  **Kegunaan :** __Untuk menampilkan daftar putar Lagu/Video.__
 """)
                 await event.edit(
                     text,
@@ -834,7 +840,7 @@ with bot:
                     link_preview=True,
                     buttons=[Button.inline("ʙᴀᴄᴋ", data="inline_yins")])
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -846,25 +852,25 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Commands available in vctools**
+✘ **Perintah yang tersedia di vctools** ✘
 
-   » **Command : **`{cmd}startvc`
-   » **Usage :** __To start a voice chat group.__
+  »  **Perintah : **`{cmd}startvc`
+  »  **Kegunaan :** __Untuk Memulai voice chat group.__
 
-   » **Command : **`{cmd}stopvc`
-   » **Usage :** __To stop group voice chat.__
+  »  **Perintah : **`{cmd}stopvc`
+  »  **Kegunaan :** __Untuk Memberhentikan voice chat group.__
 
-   » **Command :** `{cmd}joinvc` or `{cmd}joinvc` <chatid/username gc>
-   » **Usage :** __To join a voice chat group.__
+  »  **Perintah :** `{cmd}joinvc` atau `{cmd}joinvc` <chatid/username gc>
+  »  **Kegunaan :** __Untuk Bergabung ke voice chat group.__
 
-   » **Command : **`{cmd}leavevc` or `{cmd}leavevc` <chatid/username gc>
-   » **Usage :** __To get off the voice chat group.__
+  »  **Perintah : **`{cmd}leavevc` atau `{cmd}leavevc` <chatid/username gc>
+  »  **Kegunaan :** __Untuk Turun dari voice chat group.__
 
-   » **Command : **`{cmd}vctitle` <title vcg>
-   » **Usage :** __To change the title of the voice chat group.__
+  »  **Perintah : **`{cmd}vctitle` <title vcg>
+  »  **Kegunaan :** __Untuk Mengubah title/judul voice chat group.__
 
-   » **Command : **`{cmd}vcinvite`
-   » **Usage :** __Inviting group members to voice chat group.__
+  »  **Perintah : **`{cmd}vcinvite`
+  »  **Kegunaan :** __Mengundang Member group ke voice chat group.__
 """)
                 await event.edit(
                     text,
@@ -872,7 +878,7 @@ with bot:
                     link_preview=True,
                     buttons=[Button.inline("ʙᴀᴄᴋ", data="inline_yins")])
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.CallbackQuery(data=b"konten_yins"))
@@ -892,7 +898,7 @@ with bot:
                                  ]
                                  )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -904,22 +910,22 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Available Commands in the bot cmd menu** ✘
+✘ **Perintah Yang Tersedia Di btpm** ✘
 
-  » **Order : **`{cmd}btpm` <username ch>
-   » **Usage :** __To Get Empty Btpm List.__
+  »  **Perintah : **`{cmd}btpm` <username ch>
+  »  **Kegunaan :** __Untuk Mendapatkan List Btpm Kosong.__
 
-   » **Command : **`{cmd}savebt` <list_name>
-   » **Usage :** __To Save Btpm List, Use Different Name.__
+  »  **Perintah : **`{cmd}savebt` <nama_list>
+  »  **Kegunaan :** __Untuk Menyimpan List Btpm, Gunakan Nama Yang Berbeda.__
 
-   » **Command : **$<list_name>
-   » **Usage :** __To Get List of Stored Btpm.__
+  »  **Perintah : **$<nama_list>
+  »  **Kegunaan :** __Untuk Mendapatkan List Btpm Yang Tersimpan.__
 
-   » **Command : **`{cmd}delbt` <list_name>
-   » **Usage :** __Delete Saved Btpm List.__
+  »  **Perintah : **`{cmd}delbt` <nama_list>
+  »  **Kegunaan :** __Menghapus List Btpm Yang Tersimpan.__
 
-   » **Command : **`{cmd}listbt` <list_name>
-   » **Usage :** __To View All Stored Btpm List.__
+  »  **Perintah : **`{cmd}listbt` <nama_list>
+  »  **Kegunaan :** __Untuk Menlihat Semua List Btpm Yang Tersimpan.__
 """)
                 await event.edit(
                     text,
@@ -927,7 +933,7 @@ with bot:
                     link_preview=True,
                     buttons=[Button.inline("ʙᴀᴄᴋ", data="konten_yins")])
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -939,10 +945,10 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Commands available on yins bokep**
+✘ **Perintah yang tersedia di yins bokep** ✘
 
-   » **Command : **`{cmd}bokp`
-   » **Usage :** __To send bokp randomly.__
+  »  **Perintah : **`{cmd}bokp`
+  »  **Kegunaan :** __Untuk Mengirim bokp secara random.__
 """)
                 await event.edit(
                     text,
@@ -950,7 +956,7 @@ with bot:
                     link_preview=True,
                     buttons=[Button.inline("ʙᴀᴄᴋ", data="konten_yins")])
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -962,13 +968,13 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Commands available in tools**
+✘ **Perintah yang tersedia di tools** ✘
 
-   » **Command :** `{cmd}lang`
-   » **Usage: **To Change Language.
+  »  **Perintah :** `{cmd}lang`
+  »  **Kegunaan : **Untuk Mengubah Bahasa.
 
-   » **Command :** `{cmd}string`
-   » **Usage: **To Create String Session.
+  »  **Perintah :** `{cmd}string`
+  »  **Kegunaan : **Untuk Membuat String Session.
 """)
                 await event.edit(
                     text,
@@ -976,7 +982,7 @@ with bot:
                     link_preview=True,
                     buttons=[Button.inline("ʙᴀᴄᴋ", data="gcback")])
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER \n\nYou have no right to press these buttons"
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.CallbackQuery(data=b"close"))
@@ -1008,7 +1014,7 @@ with bot:
                     current_page_number - 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"You are not allowed, this is Userbot Owned {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ub_modul_(.*)")))
@@ -1023,7 +1029,7 @@ with bot:
                         .replace("`", "")
                         .replace("**", "")[:950]
                         + "..."
-                        + f"\n\nRead Next Text Type {cmd}help "
+                        + f"\n\nBaca Teks Berikutnya Ketik {cmd}help "
                         + modul_name
                         + " "
                     )
@@ -1034,7 +1040,7 @@ with bot:
                 reply_pop_up_alert = (
                     help_string
                     if help_string is not None
-                    else "{} No documents have been written for the module.".format(
+                    else "{} Tidak ada dokumen yang telah ditulis untuk modul.".format(
                         modul_name
                     )
                 )
@@ -1044,9 +1050,9 @@ with bot:
                 )
 
             else:
-                reply_pop_up_alert = f"You are not allowed, this is Userbot Owned {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
-          f"IF YOUR BOT IS NGECRASH, CLICK SAVE IN THE BOTTOM RIGHT CORNER AND SEND TO @AyiinOXDSupport » TAG @admin » Info By: Ayiin-Userbot {BOT_VER}")
+            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @AyiinXdSupport » TAG @admin » Info By: Ayiin-Userbot {BOT_VER}")
