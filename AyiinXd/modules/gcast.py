@@ -1,14 +1,3 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-#
-# Ported by Koala @manusiarakitann
-# Recode by @mrismanaziz
-# FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
-# t.me/SharingUserbot & t.me/Lunatic0de
 
 import asyncio
 import os
@@ -23,32 +12,9 @@ from AyiinXd.ayiin import ayiin_cmd, eod, eor
 from Stringyins import get_string
 
 GCAST_BLACKLIST = [
-    -1001675396283,  # AyiinXdSupport
+    -1001675396283,  # AyiinoXdSupport
     -1001473548283,  # SharingUserbot
-    -1001433238829,  # TedeSupport
-    -1001476936696,  # AnosSupport
-    -1001327032795,  # UltroidSupport
-    -1001294181499,  # UserBotIndo
-    -1001419516987,  # VeezSupportGroup
-    -1001459812644,  # GeezSupportGroup
-    -1001296934585,  # X-PROJECT BOT
-    -1001481357570,  # UsergeOnTopic
-    -1001459701099,  # CatUserbotSupport
-    -1001109837870,  # TelegramBotIndonesia
-    -1001752592753,  # Skyzusupport
-    -1001788983303,  # KayzuSupport
-    -1001380293847,  # NastySupport
-    -1001692751821,  # RamSupport
-    -1001267233272,  # PocongUserbot
-    -1001500063792,  # Trident
-    -1001687155877,  # CilikSupport
-    -1001578091827,  # PrimeSupport
-    -1001704645461,  # Jamet No Support
-    -1001795015842,  # NightClown
-    -1001662510083,  # MutualanDestra
-    -1001347414136,  # ArunaMutualan
-    -1001572486389,  # PluviaMusicGroup
-]
+
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
@@ -182,17 +148,17 @@ async def _(event):
 
 
 CMD_HELP.update(
-    {
-        "gcast": f"**Plugin : **`gcast`\
-        \n\n  »  **Perintah :** `{cmd}gcast` <text/reply media>\
-        \n  »  **Kegunaan : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
-        \n\n  »  **Perintah :** `{cmd}blchat`\
-        \n  »  **Kegunaan : **Untuk Mengecek informasi daftar blacklist gcast.\
-        \n\n  »  **Perintah :** `{cmd}addblacklist`\
-        \n  »  **Kegunaan : **Untuk Menambahkan grup tersebut ke blacklist gcast.\
-        \n\n  »  **Perintah :** `{cmd}delblacklist`\
-        \n  »  **Kegunaan : **Untuk Menghapus grup tersebut dari blacklist gcast.\
-        \n  •  **Note : **Ketik perintah** `{cmd}addblacklist` **dan** `{cmd}delblacklist` **di grup yang kamu Blacklist.\
+{
+         "gcast": f"**Plugin : **`gcast`\
+         \n\n » **Command :** `{cmd}gcast` <text/reply media>\
+         \n » **Usage : **Send Global Broadcast messages to the entire group you are in. (Can Send Media/Stickers)\
+         \n\n » **Command :** `{cmd}blchat`\
+         \n » **Usage: **To check gcast blacklist information.\
+         \n\n » **Command :** `{cmd}addblacklist`\
+         \n » **Usage: **To add the group to the gcast blacklist.\
+         \n\n » **Command :** `{cmd}delblacklist`\
+         \n » **Usage: **To remove the group from the gcast blacklist.\
+         \n • **Note : **Type the command** `{cmd}addblacklist` **and** `{cmd}delblacklist` **in the group you are Blacklisting.\
     "
     }
 )
@@ -200,9 +166,9 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": f"**Plugin : **`gucast`\
-        \n\n  »  **Perintah :** `{cmd}gucast` <text/reply media>\
-        \n  »  **Kegunaan : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
-    "
+"gucast": f"**Plugin : **`gucast`\
+         \n\n » **Command :** `{cmd}gucast` <text/reply media>\
+         \n » **Usage: **Send Global Broadcast messages to all incoming Private Massages / PCs. (Can Send Media/Stickers)\
+     "
     }
 )
