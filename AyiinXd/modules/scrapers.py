@@ -1,4 +1,14 @@
-
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# you may not use this file except in compliance with the License.
+#
+# thanks to the owner of X-tra-Telegram for tts fix
+#
+# Recode by @mrismanaziz
+# FROM Man-Userbot
+# t.me/SharingUserbot
+#
 """ Userbot module containing various scrapers. """
 
 import asyncio
@@ -220,7 +230,7 @@ async def wiki(wiki_q):
             "output.txt",
             thumb="AyiinXd/resources/logo.jpg",
             reply_to=wiki_q.id,
-            caption="**Output is too large, sent as file**",
+            caption="**Output terlalu besar, dikirim sebagai file**",
         )
         if os.path.exists("output.txt"):
             os.remove("output.txt")
@@ -847,10 +857,10 @@ async def capture(url):
 
 CMD_HELP.update(
     {
-        "tts": f"**Plugins : **`tts`\
-        \n\n » **Command :** `{cmd}tts` <text/reply>\
-        \n » **Usage : **Translates text to speech for the set language. \
-        \n\n • **NOTE :** Use {cmd}lang tts <language code> to set the language for tr **(Default language is Indonesian)**\
+        "tts": f"**Plugin : **`tts`\
+        \n\n  »  **Perintah :** `{cmd}tts` <text/reply>\
+        \n  »  **Kegunaan : **Menerjemahkan teks ke ucapan untuk bahasa yang disetel. \
+        \n\n  •  **NOTE :** Gunakan {cmd}lang tts <kode bahasa> untuk menyetel bahasa untuk tr **(Bahasa Default adalah bahasa Indonesia)**\
     "
     }
 )
@@ -858,10 +868,10 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "translate": f"**Plugin : **`Translation`\
-        \n\n » **Command :** `{cmd}tr` <text/reply>\
-        \n » **Usage : **Translates text to the set language.\
-        \n\n • **NOTE :** Use {cmd}lang tr <language code> to set the language for tr **(Default language is Indonesian)**\
+        "translate": f"**Plugin : **`Terjemahan`\
+        \n\n  »  **Perintah :** `{cmd}tr` <text/reply>\
+        \n  »  **Kegunaan : **Menerjemahkan teks ke bahasa yang disetel.\
+        \n\n  •  **NOTE :** Gunakan {cmd}lang tr <kode bahasa> untuk menyetel bahasa untuk tr **(Bahasa Default adalah bahasa Indonesia)**\
     "
     }
 )
@@ -870,8 +880,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "removebg": f"**Plugin : **`removebg`\
-        \n\n » **Command :** `{cmd}rbg` <Link to Image> or reply to any image (Warning: does not work on stickers.)\
-        \n » **Usage : **Remove image background, using remove.bg API\
+        \n\n  »  **Perintah :** `{cmd}rbg` <Tautan ke Gambar> atau balas gambar apa pun (Peringatan: tidak berfungsi pada stiker.)\
+        \n  »  **Kegunaan : **Menghapus latar belakang gambar, menggunakan API remove.bg\
     "
     }
 )
@@ -880,8 +890,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "ocr": f"**Plugin : **`ocr`\
-        \n\n » **Command :** `{cmd}ocr` <language code>\
-        \n » **Usage : **Reply to an image or sticker to extract the text of the media.\
+        \n\n  »  **Perintah :** `{cmd}ocr` <kode bahasa>\
+        \n  »  **Kegunaan : **Balas gambar atau stiker untuk mengekstrak teks media tersebut.\
     "
     }
 )
@@ -889,11 +899,11 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "google": f"**Plugins : **`google`\
-        \n\n » **Command :** `{cmd}google` <flags> <query>\
-        \n » **Usage: **To do a google search (default 5 search results)\
-        \n • **Flags :** `-l` **= For the number of search results.**\
-        \n • **Example :** `{cmd}google -l4 AyiinXd` or `{cmd}google AyiinXd`\
+        "google": f"**Plugin : **`google`\
+        \n\n  »  **Perintah :** `{cmd}google` <flags> <query>\
+        \n  »  **Kegunaan : **Untuk Melakukan pencarian di google (default 5 hasil pencarian)\
+        \n  •  **Flags :** `-l` **= Untuk jumlah hasil pencarian.**\
+        \n  •  **Example :** `{cmd}google -l4 AyiinXd` atau `{cmd}google AyiinXd`\
     "
     }
 )
@@ -901,9 +911,9 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "wiki": f"**Plugins : **`wiki`\
-        \n\n » **Command :** `{cmd}wiki` <query>\
-        \n » **Usage : **Do a search on Wikipedia.\
+        "wiki": f"**Plugin : **`wiki`\
+        \n\n  »  **Perintah :** `{cmd}wiki` <query>\
+        \n  »  **Kegunaan : **Melakukan pencarian di Wikipedia.\
     "
     }
 )
@@ -912,13 +922,13 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "barcode": f"**Plugin : **`barcode`\
-        \n\n » **Command :** `{cmd}barcode` <content>\
-        \n » **Usage :** Generate Barcode from given content.\
-        \n\n • **Example :** `{cmd}barcode www.google.com`\
-        \n\n » **Command :** `{cmd}makeqr` <content>\
-        \n » **Usage :** Generate QR Code from given content.\
-        \n\n • **Example :** `{cmd}makeqr www.google.com`\
-        \n\n • **NOTE :** Use {cmd}decode <reply to barcode / qrcode> to get the decoded content.\
+        \n\n  »  **Perintah :** `{cmd}barcode` <content>\
+        \n  »  **Kegunaan :** Buat Kode Batang dari konten yang diberikan.\
+        \n\n  •  **Example :** `{cmd}barcode www.google.com`\
+        \n\n  »  **Perintah :** `{cmd}makeqr` <content>\
+        \n  »  **Kegunaan :** Buat Kode QR dari konten yang diberikan.\
+        \n\n  •  **Example :** `{cmd}makeqr www.google.com`\
+        \n\n  •  **NOTE :** Gunakan {cmd}decode <reply to barcode / qrcode> untuk mendapatkan konten yang didekodekan.\
     "
     }
 )
@@ -927,8 +937,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "image_search": f"**Plugin : **`image_search`\
-        \n\n » **Command :** `{cmd}img` <search_query>\
-        \n » **Usage : **Does an image search on Google and displays 15 images.\
+        \n\n  »  **Perintah :** `{cmd}img` <search_query>\
+        \n  »  **Kegunaan : **Melakukan pencarian gambar di Google dan menampilkan 15 gambar.\
     "
     }
 )
@@ -937,17 +947,17 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "ytdl": f"**Plugin : **`ytdl`\
-        \n\n » **Command :** `{cmd}yt` <amount> <query>\
-        \n » **Usage : **Perform YouTube Search. Can specify the number of results required (default is 5)\
-        \n\n » **Command :** `{cmd}ytaudio` <url>\
-        \n » **Usage: **To download songs from YouTube with a link.\
-        \n\n » **Command :** `{cmd}ytvideo` <quality> <url>\
-        \n • **Quality : **`144`, `240`, `360`, `480`, `720`, `1080`, `2160`\
-        \n » **Usage : **To download videos from YouTube with links.\
-        \n\n » **Command :** `{cmd}song` <song name>\
-        \n » **Usage: **To download songs from youtube with the name of the song.\
-        \n\n » **Command :** `{cmd}vsong` <song name>\
-        \n » **Usage: **To download videos from youtube with the name video.\
+        \n\n  »  **Perintah :** `{cmd}yt` <jumlah> <query>\
+        \n  »  **Kegunaan : **Melakukan Pencarian YouTube. Dapat menentukan jumlah hasil yang dibutuhkan (default adalah 5)\
+        \n\n  »  **Perintah :** `{cmd}ytaudio` <url>\
+        \n  »  **Kegunaan : **Untuk Mendownload lagu dari YouTube dengan link.\
+        \n\n  »  **Perintah :** `{cmd}ytvideo` <quality> <url>\
+        \n  •  **Quality : **`144`, `240`, `360`, `480`, `720`, `1080`, `2160`\
+        \n  »  **Kegunaan : **Untuk Mendownload video dari YouTube dengan link.\
+        \n\n  »  **Perintah :** `{cmd}song` <nama lagu>\
+        \n  »  **Kegunaan : **Untuk mendownload lagu dari youtube dengan nama lagu.\
+        \n\n  »  **Perintah :** `{cmd}vsong` <nama lagu>\
+        \n  »  **Kegunaan : **Untuk mendownload Video dari youtube dengan nama video.\
     "
     }
 )
@@ -956,9 +966,9 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "screenshot": f"**Plugin : **`screenshot`\
-        \n\n » **Command :** `{cmd}ss` <url>\
-        \n » **Usage : **Take screenshots of websites and send screenshots.\
-        \n • **Example : {cmd}ss http://www.google.com\
+        \n\n  »  **Perintah :** `{cmd}ss` <url>\
+        \n  »  **Kegunaan : **Mengambil tangkapan layar dari situs web dan mengirimkan tangkapan layar.\
+        \n  •  **Example  : {cmd}ss http://www.google.com\
     "
     }
 )
@@ -967,8 +977,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "currency": f"**Plugin : **`currency`\
-        \n\n » **Command :** `{cmd}currency` <amount> <from> <to>\
-        \n » **Usage : **Converts multiple currencies for you.\
+        \n\n  »  **Perintah :** `{cmd}currency` <amount> <from> <to>\
+        \n  »  **Kegunaan : **Mengonversi berbagai mata uang untuk Anda.\
     "
     }
 )
@@ -977,8 +987,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "ud": f"**Plugin : **`Urban Dictionary`\
-        \n\n » **Command :** `{cmd}ud` <query>\
-        \n » **Usage : **Search in Urban Dictionary.\
+        \n\n  »  **Perintah :** `{cmd}ud` <query>\
+        \n  »  **Kegunaan : **Melakukan pencarian di Urban Dictionary.\
     "
     }
 )
