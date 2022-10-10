@@ -573,7 +573,7 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinoXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [karan](https://t.me/kkara9009)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinoXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ananya](https://t.me/an_unic_or_n47)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -581,7 +581,7 @@ with bot:
                                 "https://t.me/AyiinoXdSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://t.me/kkara9009"),
                         ],
                     ],
                     link_preview=False,
@@ -601,10 +601,10 @@ with bot:
                         [
                             custom.Button.url(
                                 "Bᴏᴛ Sᴛʀɪɴɢ",
-                                url="https://t.me/AyiinStringRobot?start="),
+                                url="https://t.me/AyiinoxdStringRobot?start="),
                             custom.Button.url(
                                 "Sᴛʀɪɴɢ Rᴇᴘʟɪᴛ",
-                                url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
+                                url="https://repl.it/@anunicn47/AyiinString?lite=1&outputonly=1"),
                         ],
                         [
                             custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinoXdSupport"),
@@ -675,7 +675,7 @@ with bot:
                 result = builder.article(
                     title="✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ✨",
                     description="Ayiin - Userbot | Telethon",
-                    url="https://t.me/AyiinSupport",
+                    url="https://t.me/AyiinxodSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
@@ -689,7 +689,7 @@ with bot:
                                 "https://t.me/AyiinoXdSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://github.com/AyiinoXd/Ayiin-Userbot"),
                         ],
                     ],
                     link_preview=False,
