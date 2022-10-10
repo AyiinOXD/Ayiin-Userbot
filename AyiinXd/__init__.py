@@ -432,10 +432,10 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/9f8e73d387f25b7f27ce5.jpg",
-                    "https://telegra.ph/file/c935d34b48e45fba22b03.jpg",
-                    "https://telegra.ph/file/392f69c8717c91b1e8a3b.jpg",
-                    "https://telegra.ph/file/4c5b756dd13d7a88c866b.jpg",
+                    "https://telegra.ph//file/2d5a506d44047a83ec06d.jpg",
+                    "https://telegra.ph//file/2d5a506d44047a83ec06d.jpg",
+                    "https://telegra.ph//file/2d5a506d44047a83ec06d.jpg",
+                    "https://telegra.ph//file/2d5a506d44047a83ec06d.jpg",
                 ]
         )
         cmd = CMD_HANDLER
@@ -476,7 +476,7 @@ with bot:
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            f"**ERROR:** Saat menyimpan detail pesan di database\n`{str(e)}`",
+                            f"**ERROR:** When saving message details in database\n`{str(e)}`",
                         )
             else:
                 if event.text.startswith("/"):
@@ -510,7 +510,7 @@ with bot:
                             )
                     except UserIsBlockedError:
                         return await event.reply(
-                            "❌ **Bot ini diblokir oleh pengguna.**"
+                            "❌ **BWhen saving message details in database ot is blocked by user.**"
                         )
                     except Exception as e:
                         return await event.reply(f"**ERROR:** `{e}`")
@@ -527,7 +527,7 @@ with bot:
                         if BOTLOG:
                             await event.client.send_message(
                                 BOTLOG_CHATID,
-                                f"**ERROR:** Saat menyimpan detail pesan di database\n`{e}`",
+                                f"**ERROR:** When saving message details in database\n`{e}`",
                             )
 
         @tgbot.on(
@@ -546,7 +546,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                reply_pop_up_alert = f"You are not allowed, this is Userbot Owned {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.InlineQuery)
@@ -555,7 +555,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@AyiinXdSupport"):
+                    "@AyiinoXdSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=logoyins,
@@ -567,18 +567,18 @@ with bot:
                 result = builder.article(
                     title="Repository",
                     description="Repository Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    url="https://t.me/AyiinoXdSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinoXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/AyiinoXdSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
                                 "https://github.com/AyiinXd/Ayiin-Userbot"),
@@ -590,7 +590,7 @@ with bot:
                 result = builder.article(
                     title="String",
                     description="String Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    url="https://t.me/AyiinoXdSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -607,7 +607,7 @@ with bot:
                                 url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
                         ],
                         [
-                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinXdSupport"),
+                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinoXdSupport"),
                         ],
                     ],
                     link_preview=False,
@@ -629,7 +629,7 @@ with bot:
                 result = builder.article(
                     title="Lang",
                     description="Lang Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    url="https://t.me/AyiinoXdSupport",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -686,7 +686,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/AyiinoXdSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
                                 "https://github.com/AyiinXd/Ayiin-Userbot"),
@@ -1050,4 +1050,4 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @AyiinXdSupport » TAG @admin » Info By: Ayiin-Userbot {BOT_VER}")
+            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @AyiinoXdSupport » TAG @admin » Info By: Ayiin-Userbot {BOT_VER}")
