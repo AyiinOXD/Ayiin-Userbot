@@ -14,7 +14,7 @@ from Stringyins import get_string
 GCAST_BLACKLIST = [
     -1001675396283,  # AyiinoXdSupport
     -1001473548283,  # SharingUserbot
-
+]
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
