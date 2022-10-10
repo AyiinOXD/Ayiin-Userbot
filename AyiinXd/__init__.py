@@ -93,19 +93,14 @@ if CONFIG_CHECK := os.environ.get(
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/DEVS.json"
+        "https://raw.githubusercontent.com/AyiinoXd/Reforestation/master/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
         DEVS = [
-            997461844,
-            1905050903,
-            844432220,
-            883761960,
-            2130526178,
-            997461844,
-            1663258664,
+            1174498420,
+            5233742848,
         ]
         break
     DEVS = _DEVS.json()
@@ -163,7 +158,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinXd/Ayiin-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinoXd/Ayiin-Userbot.git")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
