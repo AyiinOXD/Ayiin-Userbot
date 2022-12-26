@@ -42,7 +42,7 @@ Use this bot at your own risk, and use this userbot wisely.
 ### Tutorial Deploy di VPS
 
 
- • `git clone https://github.com/AellyOXD/Ayiin-Userbot`
+ • `git clone https://github.com/AyiinOXD/Ayiin-Userbot`
 
  • `cd Ayiin-Userbot`
 
